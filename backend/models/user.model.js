@@ -7,14 +7,7 @@ const userSchema=new mongoose.Schema({
     password:{type:String, required:true}, 
     role:{type:mongoose.Types.Schema.ObjectId, ref:"Role" , required:true},
 
-    //seller-specific fields
-
-   storeName:{type:String},
-   storeDescription:{type:String},
-   isverifiedSeller:{type:Boolean, default:false}
-
-   //admin related field can be add later
-
+     isverifiedSeller:{type:Boolean, default:false}
 }, {timestamps:true});
 
 export const userModel=mongoose.model("User", userSchema)
