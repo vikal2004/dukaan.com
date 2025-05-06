@@ -3,9 +3,11 @@ import {userModel} from "../models/user.model.js"
 import bcrypt from "bcrypt"
 import { roleModel } from "../models/role.model.js";
 import jwt from "jsonwebtoken"
+import { storeModel } from "../models/store.model.js";
 
 export const Register=async(req, res)=>{
     const {name, email , password , role}=req.body;
+    console.log([name, email, password, role])
     try {
 
         if(!name || !email || !password || !role){
@@ -32,6 +34,14 @@ export const Register=async(req, res)=>{
             password:hashPass, 
             role:roleDoc._id
         })  
+
+        if(role==="merchant"){
+            await storeModel.create({
+                name:`${name}' Store`, 
+                merchant:user._id, 
+                description:"this is your store add products and sell it", 
+            })
+        }
         
         res.status(201).json({user});
 
@@ -65,7 +75,7 @@ export const Login=async(req, res)=>{
         //create a token
         const token=jwt.sign(payload, process.env.JWT_SECRET);
 
-        res.status(200).json(token);
+        res.status(200).json({user, token});
    
     } catch (error) {
         return res.status(500).json({message:"internel server error while logging user"})
