@@ -36,68 +36,16 @@ Routing: Protected routes to secure merchant and customer areas
 Reddit
 Syncfusion
 
-📁 Project Structure
-pgsql
-Copy
-Edit
-├── src
-│   ├── components
-│   │   ├── merchant
-│   │   │   ├── Layout.jsx
-│   │   │   ├── Sidebar.jsx
-│   │   │   └── Header.jsx
-│   │   └── ProtectedRoute.jsx
-│   ├── context
-│   │   └── AuthContext.jsx
-│   ├── pages
-│   │   ├── auth
-│   │   │   ├── SignInPage.jsx
-│   │   │   └── SignUpPage.jsx
-│   │   ├── customer
-│   │   │   ├── CustomerLayout.jsx
-│   │   │   ├── CustomerDashboard.jsx
-│   │   │   ├── OrderHistoryPage.jsx
-│   │   │   ├── OrderDetailPage.jsx
-│   │   │   ├── ReviewSubmission.jsx
-│   │   │   ├── InvoiceAccessPage.jsx
-│   │   │   └── InvoiceDownload.jsx
-│   │   ├── merchant
-│   │   │   ├── Dashboard.jsx
-│   │   │   ├── Products.jsx
-│   │   │   ├── Orders.jsx
-│   │   │   └── Settings.jsx
-│   │   ├── LandingPage.jsx
-│   │   ├── StoreListingPage.jsx
-│   │   ├── StorefrontPage.jsx
-│   │   ├── ProductDetailPage.jsx
-│   │   ├── CartPage.jsx
-│   │   ├── CheckoutPage.jsx
-│   │   └── OrderConfirmationPage.jsx
-│   └── App.jsx
-├── public
-│   └── index.html
-├── .gitignore
-├── package.json
-└── tailwind.config.js
-📦 Installation
-Clone the repository:
 
-bash
-Copy
-Edit
 git clone https://github.com/yourusername/react-ecommerce-platform.git
 cd react-ecommerce-platform
 Install dependencies:
 
-bash
-Copy
-Edit
+
 npm install
 Start the development server:
 
-bash
-Copy
-Edit
+
 npm start
 The application will run at http://localhost:3000.
 
