@@ -37,7 +37,7 @@ Reddit
 Syncfusion
 
 
-git clone https://github.com/yourusername/react-ecommerce-platform.git
+git clone https://github.com/vikal2004/dukaan.com.git
 cd react-ecommerce-platform
 Install dependencies:
 
